@@ -48,13 +48,12 @@
                 </div>
 
                 <div class="relative hidden md:block">
-                    <div class="bg-stone-100 rounded-2xl p-8 aspect-square flex items-center justify-center">
-                        <div class="w-full h-full bg-gradient-to-br from-stone-200 to-stone-100 rounded-xl flex items-center justify-center">
-                            <svg class="w-32 h-32 text-stone-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
-                            </svg>
-                        </div>
-                    </div>
+                    <img
+                        src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=600&h=600&fit=crop&crop=center&q=80"
+                        alt="New Collection"
+                        class="w-full h-full object-cover rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.1)]"
+                    >
+                    <div class="absolute inset-0 rounded-2xl border border-stone-200 pointer-events-none"></div>
                 </div>
             </div>
         </div>
