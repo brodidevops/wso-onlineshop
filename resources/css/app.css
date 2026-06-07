@@ -1,3 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply font-sans text-slate-700 antialiased;
+    background: #F8FAFC;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display text-navy-900;
+  }
+}
+
+@layer components {
+  /* Button variants */
+  .btn {
+    @apply inline-flex items-center justify-center font-medium text-sm transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-primary {
+    @apply bg-navy-800 text-white px-6 py-3 rounded-card shadow-card hover:bg-navy-900 hover:shadow-card-hover active:scale-[0.98];
+  }
+  .btn-brand {
+    @apply bg-brand-600 text-white px-6 py-3 rounded-card shadow-card hover:bg-brand-700 hover:shadow-card-hover active:scale-[0.98];
+  }
+  .btn-outline {
+    @apply border-2 border-navy-800 text-navy-800 px-6 py-3 rounded-card hover:bg-navy-800 hover:text-white transition-all duration-200 active:scale-[0.98];
+  }
+  .btn-white {
+    @apply bg-white text-navy-800 px-6 py-3 rounded-card shadow-card hover:shadow-card-hover hover:bg-slate-50 active:scale-[0.98];
+  }
+  .btn-white-outline {
+    @apply border-2 border-white text-white px-6 py-3 rounded-card hover:bg-white/10 active:scale-[0.98];
+  }
+  .btn-ghost {
+    @apply text-navy-700 px-4 py-2 rounded-card hover:bg-slate-100 active:bg-slate-200;
+  }
+  .btn-accent {
+    @apply bg-accent-500 text-white px-6 py-3 rounded-card shadow-card hover:bg-accent-600 hover:shadow-card-hover active:scale-[0.98];
+  }
+  .btn-success {
+    @apply bg-success-500 text-white px-6 py-3 rounded-card shadow-card hover:bg-success-600 active:scale-[0.98];
+  }
+
+  /* Navigation */
+  .nav-link {
+    @apply text-slate-600 hover:text-navy-800 font-medium text-sm transition-colors duration-200;
+  }
+  .nav-link-active {
+    @apply text-navy-800 font-semibold;
+  }
+
+  /* Cards */
+  .card {
+    @apply bg-white rounded-card shadow-soft border border-slate-100 transition-all duration-200;
+  }
+  .card-hover {
+    @apply hover:shadow-card-hover hover:-translate-y-0.5;
+  }
+  .card-img {
+    @apply w-full h-52 object-cover rounded-t-card overflow-hidden;
+  }
+
+  /* Form inputs */
+  .input {
+    @apply w-full px-4 py-3 border border-slate-200 rounded-card bg-white text-slate-800 placeholder-slate-400
+           focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 focus:outline-none transition-all duration-200;
+  }
+  .label {
+    @apply block text-sm font-medium text-slate-700 mb-1.5;
+  }
+
+  /* Badge */
+  .badge {
+    @apply inline-flex items-center px-2.5 py-1 rounded-pill text-xs font-semibold transition-colors;
+  }
+  .badge-brand {
+    @apply bg-brand-100 text-brand-700;
+  }
+  .badge-accent {
+    @apply bg-accent-100 text-accent-700;
+  }
+  .badge-success {
+    @apply bg-success-50 text-success-600;
+  }
+
+  /* Section padding */
+  .section {
+    @apply py-16 md:py-24 px-4 sm:px-6 lg:px-8;
+  }
+  .section-container {
+    @apply max-w-7xl mx-auto;
+  }
+  .container-narrow {
+    @apply max-w-4xl mx-auto;
+  }
+
+  /* Gradient text */
+  .text-gradient {
+    @apply bg-gradient-to-r from-navy-800 to-brand-600 bg-clip-text text-transparent;
+  }
+
+  /* Navbar item */
+  .navbar-item {
+    @apply px-4 py-2 text-sm font-medium text-slate-600 hover:text-navy-800 rounded-card transition-colors duration-150 cursor-pointer;
+  }
+  .navbar-item-active {
+    @apply text-navy-800 font-semibold bg-navy-50/50;
+  }
+
+  /* Stat number */
+  .stat-number {
+    @apply text-display-lg font-bold text-navy-900 tracking-tight;
+  }
+
+  /* Divider */
+  .divider {
+    @apply h-px bg-slate-200 my-8;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
